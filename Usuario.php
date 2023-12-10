@@ -21,7 +21,7 @@ class Usuario extends BDUtils {
         
         if ($listaUsuarios == true) { //Se consulta si la lista tiene datos.
             return $listaUsuarios;
-            $listaUsuarios->close; //Se cierra la conexiÛn a la BD.
+            $listaUsuarios->close; //Se cierra la conexi√≥n a la BD.
         }
     }
 }

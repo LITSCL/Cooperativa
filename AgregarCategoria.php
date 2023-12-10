@@ -2,9 +2,9 @@
 
 <?php 
 session_start(); //Cada vez que se quiera trabajar con sesiones en un documento hay que utilizar "session_start()".
-if (empty($_SESSION["usuario"])) { //Se esta preguntando si la sesi髇 existe.
+if (empty($_SESSION["usuario"])) { //Se esta preguntando si la sesi贸n existe.
     header("Location: Login.php");
-    exit(); //Finaliza el Script (No se lee nada mas que este abajo de esta isntrucci髇).
+    exit(); //Finaliza el Script (No se lee nada mas que este abajo de esta isntrucci贸n).
 }
 if (empty($_SESSION["usuario"]) == false && substr($_SESSION["usuario"], -1) === "0") {
     echo "Los socios no pueden acceder a esta pagina";
@@ -22,7 +22,7 @@ if (empty($_SESSION["usuario"]) == false && substr($_SESSION["usuario"], -1) ===
     </head>
     <body>
     	<?php
-    	if(isset($_REQUEST["agregar"])) { //Aca se esta consultando si se dio click al bot髇 Agregar.
+    	if(isset($_REQUEST["agregar"])) { //Aca se esta consultando si se dio click al bot贸n Agregar.
     	    $categoria = new Categoria();
     	    $crearCategoria = $categoria->create($_REQUEST["codigo"], $_REQUEST["nombre"]);
     	    if ($crearCategoria == 1){ //Si create es igual a 1 singnifica True (Si ingreso el registro).
@@ -35,7 +35,7 @@ if (empty($_SESSION["usuario"]) == false && substr($_SESSION["usuario"], -1) ===
     	        echo "<script>alert('Error de ingreso'); window.location='AgregarCategoria.php'</script>";
     	    }
     	}
-    	else { //Si no se le dio click al bot髇 Agregar se muestra el formulario.
+    	else { //Si no se le dio click al bot贸n Agregar se muestra el formulario.
     	?>
         	<div>
             	<form action="AgregarCategoria.php" method="GET">

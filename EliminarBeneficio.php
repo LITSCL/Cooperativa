@@ -2,9 +2,9 @@
 
 <?php 
 session_start(); //Cada vez que se quiera trabajar con sesiones en un documento hay que utilizar "session_start()".
-if (empty($_SESSION["usuario"])) { //Se esta preguntando si la sesión existe.
+if (empty($_SESSION["usuario"])) { //Se esta preguntando si la sesiÃ³n existe.
     header("Location: Login.php");
-    exit(); //Finaliza el Script (No se lee nada mas que este abajo de esta isntrucción).
+    exit(); //Finaliza el Script (No se lee nada mas que este abajo de esta isntrucciÃ³n).
 }
 if (empty($_SESSION["usuario"]) == false && substr($_SESSION["usuario"], -1) === "0") {
     echo "Los socios no pueden acceder a esta pagina";
