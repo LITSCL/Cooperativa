@@ -17,13 +17,13 @@ if (empty($_SESSION["usuario"]) == false && substr($_SESSION["usuario"], -1) ===
     $codigo = $_REQUEST["codigo"];
     $categoria = new Categoria();
     $eliminarCategoria = $categoria->remove($codigo);
-    if ($eliminarCategoria == 1){
+    if ($eliminarCategoria == 1) {
         echo "<br>Categoria eliminada";
         ?>
     	<a href="ListaCategoriasAdministrador.php"><button>Mostrar lista</button></a>
     	<?php 
     }
-    else{
+    else {
         echo "<script>alert('Error al eliminar'); window.location='ListaCategoriasAdministrador.php'</script>";   
     }
 }

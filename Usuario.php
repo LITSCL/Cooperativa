@@ -15,7 +15,7 @@ class Usuario extends BDUtils {
     }
     
     public function buscar($rut) {
-        $sql = "SELECT * FROM usuario WHERE rut='$rut'"; //Se establece la sentencia SQL.
+        $sql = "SELECT * FROM usuario WHERE rut = '$rut'"; //Se establece la sentencia SQL.
         $ejecutar = $this->_db->query($sql);
         $listaUsuarios = $ejecutar->fetch_all(MYSQLI_ASSOC); //Aca se ejecuta la consulta y se almacenan los datos en la lista.
         

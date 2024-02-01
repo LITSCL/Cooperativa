@@ -12,20 +12,21 @@ if (empty($_SESSION["usuario"]) == false && substr($_SESSION["usuario"], -1) ===
     echo "Bienvenido Administador: " . substr($_SESSION["usuario"],0 , -1); //Aca se toman todos los caracteres menos el ultimo.
     echo "<a href='Logout.php'>Cerrar Sesion</a>";
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Document</title>
-</head>
-<body>
-	<ul>
-		<li><a href="ListaBeneficiosAdministrador.php">Lista Beneficios</a></li>
-		<li><a href="ListaCategoriasAdministrador.php">Lista Categorias</a></li>
-	</ul>
-	<hr>
-</body>
-</html>
+	<!doctype html>
+	<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="ListaBeneficiosAdministrador.php">Lista Beneficios</a></li>
+			<li><a href="ListaCategoriasAdministrador.php">Lista Categorias</a></li>
+		</ul>
+		<hr>
+	</body>
+	</html>
 <?php 
 }
 ?>
